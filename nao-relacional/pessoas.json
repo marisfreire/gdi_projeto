@@ -1,0 +1,19 @@
+[
+    {
+        "_id": 1,
+        "nome": "Mariana Sousa", 
+        "CPF": "029581014113-23",
+        "data_nasc": "24/10/2003",
+        "endereco": {
+            "logradouro": "rua aba aba",
+            "numero": "3459",
+            "bairro": "graças",
+            "cidade": "recife",
+            "uf": "pernambuco",
+            "cep": "405820-423"
+        }
+    },
+    {
+        "_id": 2
+    }
+]
