@@ -19,13 +19,23 @@ for comando in comandos:
 # solicitando os dados ao usuário
 continuar = True
 
+try:
+    with open('povoamento.sql', 'r') as arquivo_povoamento:
+        povoamento_sql = arquivo_povoamento.read()
+        comandos_povoamento = povoamento_sql.split(';')
+        for comando in comandos_povoamento:
+            if comando.strip():
+                cursor.execute(comando)
+except OperationalError as e:
+    print("Erro ao executar povoamento:", e)
+
 while(continuar):
     consulta = input(" Digite sua consulta ou digite 0 para sair.")
     if(consulta == "0"):
         continuar = False
     else:
         resultado = cursor.execute(consulta) 
-        linhas = resultado.fetchall
+        linhas = resultado.fetchall()
         for linha in linhas:
             print(linha) 
             
