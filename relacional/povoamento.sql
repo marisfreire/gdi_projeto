@@ -1,4 +1,6 @@
-- povoamento da tabela PESSOAS
+-- BRUCE RHAENYRA DUDU ALVIN MIA KIKI NYA LUA PAÇOCA UMBIGO 
+
+-- povoamento da tabela PESSOAS
 
 -- povoamento da tabela TEL_PESSOAS
 
@@ -10,7 +12,7 @@
 
 -- povoamento da tabela TUTOR
 
--- povoamento da tabela ESPECIALIDADE_VET
+-- povoamento da tabela RESPONSAVEL
 
 -- povoamento da tabela ANIMAL
 
@@ -22,5 +24,5 @@
 
 -- povoamento da tabela REGISTRO_DIARIO
 
--- povoamento da tabela FICHA_EMERGENCIA
+-- povoamento da tabela CARTEIRA_VACINA
 

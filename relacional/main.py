@@ -14,10 +14,8 @@ comandos = criacao.split(';')
 
 # executando os comandos pra criação
 for comando in comandos:
-    try:
         cursor.execute(comando)
-    except OperationalError:
-        print("Comando pulado: ", comando)
+    #    print("Comando pulado: ", comando)
 # solicitando os dados ao usuário
 continuar = True
 

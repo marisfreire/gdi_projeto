@@ -31,12 +31,13 @@ internacao = bd['internacao']
 
 registro_diario = bd['registro diario']
 
-ficha_emergencia = bd['ficha emergencia']
+carteira_vacina = bd['carteira_vacina']
 
+vacina = bd['vacina']
 
 ## Um documento é um registro no banco de dados SQL
 
-arquivo = open('./pessoas.json', 'r')
+arquivo = open('pessoas.json', 'r')
 pessoas = json.load(arquivo)
 arquivo.close()
 
