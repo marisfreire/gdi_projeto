@@ -50,4 +50,4 @@ WHERE P.CPF IN (
 	GROUP BY R.VET_CPF
 	HAVING COUNT(*) > 1
 	)
-;
+));
