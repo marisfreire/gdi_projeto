@@ -3,9 +3,19 @@
 -- lista o nome dos animais que receberam a vacina de raiva
 -- Junta as tabelas ANIMAL, CARTEIRA_VACINA e VACINA 
 -- filtra os registros onde a vacina aplicada é "Raiva" 
-SELECT A.NOME AS NOME_ANIMAL 
+SELECT A.NOME, A.NASCIMENTO
 FROM ANIMAL A JOIN CARTEIRA_VACINA CV ON A.ID_MICROCHIP = CV.ANIMAL_ID_MICROCHIP JOIN VACINA V ON CV.ID_CARTEIRA_VACINA = V.ID_CARTEIRA_VACINA 
 WHERE UPPER(V.NOME_VACINA) = 'RAIVA';
+
+-- Nome do animal mais velho
+-- Subconsulta Simples e Escalar
+SELECT A.NOME AS NOME_ANIMAL
+FROM ANIMAL A
+WHERE A.NASCIMENTO = (
+               SELECT MIN(NASCIMENTO)
+               FROM ANIMAL
+)
+;
 
 -- CONSULTA LUMA
 -- TUTORES QUE TEM MAIS DE DOIS ANIMAIS E A QUANTIDADE DE ANIMAIS QUE ELE POSSUI
@@ -40,6 +50,4 @@ WHERE P.CPF IN (
 	GROUP BY R.VET_CPF
 	HAVING COUNT(*) > 1
 	)
-	
-))
 ;
