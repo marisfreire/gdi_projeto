@@ -33,6 +33,7 @@ INSERT INTO TUTOR VALUES
 ('33333333333');
 
 -- ANIMAL
+-- mudar id pra int
 INSERT INTO ANIMAL VALUES 
 ('A123', 'Tobi', 'M', '2020-01-10'),
 ('B456', 'Alvin', 'F', '2019-07-23'),
@@ -53,6 +54,7 @@ INSERT INTO CONSULTA VALUES
 ('2025-08-03 10:00:00', '33333333333', 'C789', '11112222000100');
 
 -- RECEITA
+-- mudar id pra int
 INSERT INTO RECEITA VALUES 
 ('Tomar antibiótico por 7 dias', 'R001', '2025-08-01 09:00:00', '11111111111', 'A123'),
 ('Aplicar pomada 2x ao dia', 'R002', '2025-08-02 14:30:00', '11111111111', 'B456'),
