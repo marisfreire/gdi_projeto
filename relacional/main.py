@@ -45,11 +45,7 @@ while(continuar):
         resultado = cursor.execute(consulta_toda) 
         linhas = resultado.fetchall()
         for linha in linhas:
-            output = ''
-            for l in linha:
-                output += l
-            print(output)
-
+            print(linha)
 
 os.remove('./clinicavet.db')
 conn.close()
