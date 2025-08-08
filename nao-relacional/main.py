@@ -40,11 +40,7 @@ veterinario = bd['veterinario']
 
 tutor = bd['tutor']
 
-especialidade_vet = bd['especialidade_vet']
-
 animal = bd['animal']
-
-consulta = bd['consulta']
 
 receita = bd['receita']
 
