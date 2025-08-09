@@ -28,7 +28,7 @@ def run():
 
     resultado = bd.veterinarios.find(
         {"consultorio.nome" : "PetFeliz"},
-        {"nome": 1}
+        {"_id": 0, "nome": 1}
     )
 
     print("Cenario 2", list(resultado))

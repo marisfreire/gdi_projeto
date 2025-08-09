@@ -38,7 +38,7 @@ def run():
     resultado = bd.veterinarios.find(
         #"id": {"$in": [11, 12]} -> significa “pegar todos os veterinários cujo campo id esteja dentro dessa lista"
         {"id": {"$in": consultorio["ids_veterinarios"]}},
-        {"id": 0, "nome": 1}
+        {"_id": 0, "nome": 1}
     )
 
     print("Cenario 3", list(resultado))
