@@ -6,7 +6,9 @@ bd = clinica_vet['banco_de_dados']
 # documento embutido vários documentos
 # animal com vários responsáveis embutidos 
 def inserir_cenario4(colecao):
-    responsavel_doc = [
+    bd.animal.delete_many({})
+
+    animal_doc = [
         {"_id": 1, 
         "nome": "Umbigo", 
         "responsaveis": [
@@ -38,23 +40,21 @@ def inserir_cenario4(colecao):
         ]}, 
     ]
 
-    bd.responsavel.insert_many(responsavel_doc)
-    print("✅ Cenário 4 inserido com sucesso!")
+    bd.animal.insert_many(animal_doc)
+    print("Cenário 4 inserido com sucesso!")
 
 def remover_cenario4(colecao):
-    bd.responsavel.delete_many({})
-    print("🗑️ Cenário 4 deletado com sucesso!")
+    bd.animal.delete_many({})
+    print("Cenário 4 deletado com sucesso!")
 
 def consulta_cenario4():
     nome_busca = "Umbigo"
 
-    animais = bd.responsavel.find({"nome" : nome_busca})
+    animais = bd.animal.find({"nome" : nome_busca})
 
-    for animal in animais:
-        print(f"Os tutores de {nome_busca} são: ")
-        responsaveis = animal.get("responsaveis", [])
+    for a in animais:
+        responsaveis = a.get("responsaveis", [])
 
         print(f"Os tutores de {nome_busca} são: ")
         for resp in responsaveis:
             print(f" - Nome: {resp['nome']} - CPF: {resp['CPF']}")
-            print()

@@ -6,6 +6,9 @@ bd = clinica_vet['banco_de_dados']
 # documento com um array de referências para documentos
 # tutor com array de referência em animal 
 def inserir_cenario3(colecao):
+    bd.tutor.delete_many({})
+    bd.animal.delete_many({})
+
     tutor1 = {"_id": 111, "nome": "Giovanna Mafra"}
     tutor2 = {"_id": 222, "nome": "Ana Silva"}
     tutor3 = {"_id": 333, "nome": "Paulo Gustavo"}
@@ -35,12 +38,12 @@ def inserir_cenario3(colecao):
     
     bd.tutor.insert_many([tutor1, tutor2, tutor3, tutor4, tutor5, tutor6, tutor7])
     bd.animal.insert_many(animal)
-    print("✅ Cenário 3 inserido com sucesso!")
+    print("Cenário 3 inserido com sucesso!")
 
 def remover_cenario3(colecao):
     bd.tutor.delete_many({})
     bd.animal.delete_many({})
-    print("🗑️ Cenário 3 deletado com sucesso!")
+    print("Cenário 3 deletado com sucesso!")
 
 def consulta_cenario3():
     nome_busca = "Umbigo"
@@ -59,4 +62,3 @@ def consulta_cenario3():
     print(f"Os tutores de {nome_busca} são: ")
     for r in resultados:
         print(f"Tutor ID: {r['tutor_id']} - Tutor: {r['nome_tutor']}")
-        print()

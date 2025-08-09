@@ -26,20 +26,32 @@ def menu():
 
         if escolha == '1':
             inserir_cenario1(bd)
+            print()
             consulta_cenario1()
+            print()
             remover_cenario1(bd)
+            
         elif escolha == '2':
             inserir_cenario2(bd)
+            print()
             consulta_cenario2()
+            print()
             remover_cenario2(bd)
+
         elif escolha == '3':
             inserir_cenario3(bd)
+            print()
             consulta_cenario3()
+            print()
             remover_cenario3(bd)
+
         elif escolha == '4':
             inserir_cenario4(bd)
+            print()
             consulta_cenario4()
+            print()
             remover_cenario4(bd)
+
         elif escolha == '0':
             print("Saindo...")
             break

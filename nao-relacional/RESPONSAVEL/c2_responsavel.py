@@ -6,6 +6,8 @@ bd = clinica_vet['banco_de_dados']
 # documento embutido apenas um documento 
 # documento embutido único (tutor dentro de animal)
 def inserir_cenario2(colecao):
+    bd.animal.delete_many({})
+
     animal_doc = [
         {"_id" : 1, 
         "nome" : "Umbigo", 
@@ -63,7 +65,7 @@ def inserir_cenario2(colecao):
             "telefone": "81977777777"
             }
         },
-        {"_id" : 7, 
+        {"_id" : 8, 
         "nome" : "Caramelo", 
         "tutor": {
             "nome": "Paulo Gustavo",
@@ -74,11 +76,11 @@ def inserir_cenario2(colecao):
     ]
 
     bd.animal.insert_many(animal_doc)
-    print("✅ Cenário 2 inserido com sucesso!")
+    print("Cenário 2 inserido com sucesso!")
 
 def remover_cenario2(colecao):
     bd.animal.delete_many({})
-    print("🗑️ Cenário 2 deletado com sucesso!")
+    print("Cenário 2 deletado com sucesso!")
 
 def consulta_cenario2():
     nome_busca = "Umbigo"
@@ -97,6 +99,5 @@ def consulta_cenario2():
     
     print(f"Os tutores de {nome_busca} são: ")
     for r in resultados:
-        print(f"Animal: {r['nome_animal']} - Tutor: {r['nome_tutor']} - CPF: {r['cpf_tutor']} - Telefone: {r['telefone_tutor']}")
-        print()
+        print(f"Tutor: {r['nome_tutor']} - CPF: {r['cpf_tutor']} - Telefone: {r['telefone_tutor']}")
 
