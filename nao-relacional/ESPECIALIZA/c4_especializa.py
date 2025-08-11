@@ -40,18 +40,17 @@ def inserir_cenario4(bd):
     print("Dados do cenário 4 inseridos com sucesso!\n")
 
 def consulta_cenario4(bd):
-    print("Consultando veterinários com especialidade em Cardiologia:")
+    print("Consultando especialidades do Dr. João Silva:")
     
     resultado = bd.veterinario.find(
-        {"especialidades.nome": "Cardiologia"},
-        {"_id": 0, "nome": 1, "especialidades.$": 1}
+        {"_id": "11111111111"},
+        {"_id": 0, "nome": 1, "especialidades": 1}
     )
     
     for doc in resultado:
         print(f"Veterinário: {doc['nome']}")
         for esp in doc['especialidades']:
-            if esp['nome'] == "Cardiologia":
-                print(f" - Especialidade: {esp['nome']} (Certificado em: {esp['data_certificacao']})")
+            print(f" - Especialidade: {esp['nome']} (Certificado em: {esp['data_certificacao']})")
 
 def executar_cenario4(bd):
     inserir_cenario4(bd)

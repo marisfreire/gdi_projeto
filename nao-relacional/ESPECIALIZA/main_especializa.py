@@ -25,6 +25,7 @@ def main():
         print("1 - Executar cenário 1")
         print("2 - Executar cenário 2")
         print("3 - Executar cenário 3")
+
         print("4 - Executar cenário 4")
         print("0 - Sair")
         

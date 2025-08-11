@@ -41,10 +41,10 @@ def inserir_cenario2(bd):
     print("Dados do cenário 2 inseridos com sucesso!\n")
 
 def consulta_cenario2(bd):
-    print("Consultando veterinários com especialidade em Cirurgia:")
+    print("Consultando especialidades do Dr. João Silva:")
     
     resultado = bd.veterinario.find(
-        {"especialidade.nome": "Cirurgia"},
+        {"_id": "11111111111"},
         {"_id": 0, "nome": 1, "especialidade.nome": 1}
     )
     
