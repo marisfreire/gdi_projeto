@@ -11,25 +11,22 @@ def inserir_cenario1(colecao):
 
     # lista de tutores
     tutor_doc = [
-        {"_id": 111, "nome": "Giovanna Mafra"}, 
+        {"_id": 111, "nome": "Giovanna Mafra", "id_animal": 1}, 
         {"_id": 222, "nome": "Ana Silva"}, 
         {"_id": 333, "nome": "Paulo Gustavo"}, 
         {"_id": 444, "nome": "Andson Baladeiro"}, 
         {"_id": 555, "nome": "Maria Fernanda"},
-        {"_id": 666, "nome": "Pedro Mafra"},
-        {"_id": 777, "nome": "Helena Mafra"},
+        {"_id": 666, "nome": "Zuiderly Mafra", "id_animal": 1},
+        {"_id": 777, "nome": "Helena Mafra", "id_animal": 1},
     ]
     
     # lista de animais
     animal_doc = [
-        {"_id" : 1, "nome" : "Umbigo", "id_tutor": 111},
-        {"_id" : 2, "nome" : "Umbigo", "id_tutor": 666},
-        {"_id" : 3, "nome" : "Umbigo", "id_tutor": 777},
-        {"_id" : 4, "nome" : "Paçoca", "id_tutor": 333}, 
-        {"_id" : 5, "nome" : "Paçoca", "id_tutor": 444}, 
-        {"_id" : 6, "nome" : "Bolinha", "id_tutor": 222}, 
-        {"_id" : 7, "nome" : "Luna", "id_tutor": 444}, 
-        {"_id" : 8, "nome" : "Caramelo", "id_tutor": 555}, 
+        {"_id" : 1, "nome" : "Umbigo"},
+        {"_id" : 4, "nome" : "Paçoca"}, 
+        {"_id" : 6, "nome" : "Bolinha"}, 
+        {"_id" : 7, "nome" : "Luna"}, 
+        {"_id" : 8, "nome" : "Caramelo"}, 
     ]
 
     bd.tutor.insert_many(tutor_doc)
@@ -46,20 +43,11 @@ def consulta_cenario1(colecao):
     nome_busca = "Umbigo"
 
     # buscar animais com esse nome
-   
-   
     # armazenar resultado
-    resultados = colecao.animal.aggregate([
-        {
-            '$lookup':
-            {
-                'from': 'tutor',
-                'localField': 'id_tutor',
-                'foreignField': '_id',
-                'as': 'tutor'
-            }
-        }
-    ])
+    animal_busca = colecao.animal.find_one({'nome':nome_busca})
+    animal_id = animal_busca['_id']
+    resultados = colecao.tutor.find({'id_animal': animal_id})
     print(f"Os tutores de {nome_busca} são: ")
+
     for r in resultados:
         print(f"Tutor ID: {r['_id']} - Tutor: {r['nome']}")

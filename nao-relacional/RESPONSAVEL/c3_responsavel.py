@@ -14,7 +14,7 @@ def inserir_cenario3(colecao):
     tutor3 = {"_id": 333, "nome": "Paulo Gustavo"}
     tutor4 = {"_id": 444, "nome": "Andson Baladeiro"}
     tutor5 = {"_id": 555, "nome": "Paula Baladeiro"}
-    tutor6 = {"_id": 666, "nome": "Pedro Mafra"}
+    tutor6 = {"_id": 666, "nome": "Zuiderly Mafra"}
     tutor7 = {"_id": 777, "nome": "Helena Mafra"}
 
     animal = [

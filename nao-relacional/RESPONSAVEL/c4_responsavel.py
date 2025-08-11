@@ -14,13 +14,13 @@ def inserir_cenario4(colecao):
         "responsaveis": [
             {"nome" : "Giovanna Mafra", "CPF": "11111111"}, 
             {"nome" : "Helena Mafra", "CPF": "22222222"},
-            {"nome" : "Pedro Mafra", "CPF": "33333333"} 
+            {"nome" : "Zuiderly Mafra", "CPF": "33333333"} 
         ]}, 
         {"_id": 2, 
         "nome": "Paçoca", 
         "responsaveis": [
             {"nome" : "Giovanna Mafra", "CPF": "11111111"}, 
-            {"nome" : "Pedro Mafra", "CPF": "22222222"}, 
+            {"nome" : "Zuiderly Mafra", "CPF": "22222222"}, 
         ]}, 
         {"_id": 3, 
         "nome": "Bolinha", 

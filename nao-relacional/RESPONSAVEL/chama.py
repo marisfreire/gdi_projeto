@@ -14,21 +14,21 @@ from c4_responsavel import inserir_cenario4, consulta_cenario4, remover_cenario4
 # ACHAR TUTORES DE ANIMAIS ESPECÍFICOS
 
 def menu():
+    print("\nEscolha um cenário para rodar:")
+    print("1 - Inserir e consultar cenário 1")
+    print("2 - Inserir e consultar cenário 2")
+    print("3 - Inserir e consultar cenário 3")
+    print("4 - Inserir e consultar cenário 4")
+    print("0 - Sair")
     while True:
-        print("\nEscolha um cenário para rodar:")
-        print("1 - Inserir e consultar cenário 1")
-        print("2 - Inserir e consultar cenário 2")
-        print("3 - Inserir e consultar cenário 3")
-        print("4 - Inserir e consultar cenário 4")
-        print("0 - Sair")
 
         escolha = input("Digite a opção: ")
 
         if escolha == '1':
             inserir_cenario1(bd)
             print()
-            consulta_cenario1()
-            print()
+            consulta_cenario1(bd)
+            print("----")
             remover_cenario1(bd)
             
         elif escolha == '2':
