@@ -11,14 +11,14 @@ def inserir_cenario3(bd):
             "nome": "Paçoca",
             "sexo": "F",
             "nascimento": "24/10/2023",
-            "veterinarios_ids": [1, 2]  # Referências para veterinários
+            "veterinarios_ids": [1]  # Referências para veterinários
         },
         {
             "_id": "a002",
             "nome": "Dudu",
             "sexo": "M",
             "nascimento": "07/07/2025",
-            "veterinarios_ids": [3]  # Referência para veterinário
+            "veterinarios_ids": [3,2]  # Referência para veterinário
         }
     ]
 

@@ -19,7 +19,7 @@ def inserir_cenario1(bd):
 
     veterinarios = [
         {"nome": "Dra. Ana", "consultorio_id": 1, "animal_id": "a001"},
-        {"nome": "Dr. João", "consultorio_id": 1, "animal_id": "a001"},
+        {"nome": "Dr. João", "consultorio_id": 1, "animal_id": "a002"},
         {"nome": "Dra. Vanessa", "consultorio_id": 2, "animal_id": "a002"}
     ]
 # Inserir animais e veterinários no banco de dados
@@ -40,7 +40,7 @@ def consulta_cenario1(bd):
     # Pegar todos veterinários que atenderam esse animal
     resultado = bd.veterinario.find(
         {"animal_id": animal["_id"]},
-        {"_id": 0, "nome": 1}
+        {"_id": 'a001', "nome": 1}
     )
 
     # Extrair apenas os nomes dos veterinários

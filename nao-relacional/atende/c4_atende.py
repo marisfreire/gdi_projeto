@@ -6,7 +6,7 @@ def inserir_cenario4(bd):
     """
     veterinarios_c4 = [
         {
-            "nome": "Dr. João",
+            "nome": "Dra. Ana",
             "consultorio_id": 1,
             "animais": [
                 {"_id": "a001", "nome": "Paçoca", "sexo": "F", "nascimento": "24/10/2023"},

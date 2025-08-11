@@ -13,11 +13,11 @@ def inserir_cenario2(bd):
             }
         },
         {
-            "nome": "Dra. Maria",
+            "nome": "Dra. Ana",
             "consultorio_id": 2,
             "animal": {
                 "_id": "a002",
-                "nome": "Mia",
+                "nome": "paçoca",
                 "sexo": "F",
                 "nascimento": "05/05/2021"
             }
@@ -32,14 +32,14 @@ def consulta_cenario2(bd):
     print("Nova consulta no cenário 2")
     
     resultado = bd.veterinario.find(
-        {"animal.nome": "Mia"},
+        {"animal.nome": "paçoca"},
         {"_id": 0, "nome": 1}  
     )
     
     # Extrai apenas os nomes dos veterinários
     veterinarios = [vet["nome"] for vet in resultado]
     
-    print("Veterinários que atendem Mia:", veterinarios)
+    print("Veterinários que atendem Paçoca:", veterinarios)
 
 def executar_cenario2(bd):
     inserir_cenario2(bd)
