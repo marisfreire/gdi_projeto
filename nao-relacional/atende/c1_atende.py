@@ -14,13 +14,20 @@ def inserir_cenario1(bd):
             'nome': 'Dudu',
             'sexo': 'M',
             'nascimento': '07/07/2025'
+        },
+
+         {
+            '_id': 'a004',
+            'nome': 'Lina',
+            'sexo': 'F',
+            'nascimento': '07/07/2024'
         }
     ]
 
     veterinarios = [
         {"nome": "Dra. Ana", "consultorio_id": 1, "animal_id": "a001"},
-        {"nome": "Dr. João", "consultorio_id": 1, "animal_id": "a002"},
-        {"nome": "Dra. Vanessa", "consultorio_id": 2, "animal_id": "a002"}
+        {"nome": "Dr. João", "consultorio_id": 1, "animal_id": "a002","animal_id": "a004"},
+        {"nome": "Dra. Vanessa", "consultorio_id": 2, "animal_id": "a004"}
     ]
 # Inserir animais e veterinários no banco de dados
     bd.animal.insert_many(animais_c1)
@@ -51,3 +58,4 @@ def consulta_cenario1(bd):
 def executar_cenario1(bd):
     inserir_cenario1(bd)
     consulta_cenario1(bd)
+
